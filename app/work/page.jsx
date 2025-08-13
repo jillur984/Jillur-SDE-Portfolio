@@ -6,17 +6,18 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import WorkSliderBtns from "@/components/WorkSliderBtns";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import Image from "next/image";
 import "swiper/css";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Thumb1 from "../../public/assets/thumb1.png";
 import Thumb2 from "../../public/assets/thumb2.png";
-import WorkSliderBtns from "@/components/WorkSliderBtns";
+import Thumb3 from "../../public/assets/thumb3.png";
+import Thumb4 from "../../public/assets/thumb4.png";
 
 const WorkPage = () => {
   const projects = [
@@ -25,17 +26,35 @@ const WorkPage = () => {
       category: "Clinic Management",
       title: "project 01",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, tempore officiis repudiandae sunt, obcaecati sed quam labore",
+        "A smart clinic management platform where patients can search for doctors based on their needs, book appointments, and view available time slots. Includes nurse availability tracking and is designed for future enhancements like automated report generation.",
       stack: [{ name: "Express" }, { name: "MongoDB" }, { name: "React" }],
       image: Thumb1,
       live: "https://jillurm-clinic.vercel.app/",
-      github: "https://github.com/jillur984/Self-Project-Clinic-Management-Project",
+      github:
+        "https://github.com/jillur984/Self-Project-Clinic-Management-Project",
     },
     {
       num: "02",
-      category: "MERN Food Delivery App",
+      category: "Gym Management System",
       title: "project 02",
-      descripti:"End-to-End Food Delivery Website (MERN Stack + Tailwind CSS + Stripe + WhatsApp Integration.It is complete end-to-end project, I developed a fully responsive and modern food delivery website using the MERN Stack — MongoDB, Express.js, React.js, and Node.js.The UI was crafted with Tailwind CSS for a sleek, mobile-friendly design. I integrated Stripe for secure payment processing and added real-time messaging via WhatsApp to enhance customer support and engagement.",
+      description:
+        "A modern and responsive Gym Management System designed to streamline member registration, track subscriptions, and manage workout plans efficiently. Developed with a full-stack architecture, the project features a completed front-end interface and a robust backend foundation, ensuring scalability for future enhancements.",
+      stack: [
+        { name: "Next js" },
+        { name: "Typescript" },
+        { name: "Tailwind CSS" },
+      ],
+      image: Thumb3,
+      live: "https://gym-management-system-sde.vercel.app/",
+      github: "https://github.com/jillur984/GYM-management-system-",
+    },
+
+    {
+      num: "03",
+      category: "MERN Food Delivery App",
+      title: "project 03",
+      description:
+        "End-to-End Food Delivery Website (MERN Stack + Tailwind CSS + Stripe + WhatsApp Integration.It is complete end-to-end project, I developed a fully responsive and modern food delivery website using the MERN Stack — MongoDB, Express.js, React.js, and Node.js.The UI was crafted with Tailwind CSS for a sleek, mobile-friendly design. I integrated Stripe for secure payment processing and added real-time messaging via WhatsApp to enhance customer support and engagement.",
       stack: [
         { name: "React js" },
         { name: "Node js" },
@@ -45,18 +64,21 @@ const WorkPage = () => {
       live: "",
       github: "https://github.com/jillur984/MERN-Food-Delivery-App.git",
     },
-
-    // {
-    //   num: "03",
-    //   category: "frontend",
-    //   title: "project 03",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, tempore officiis repudiandae sunt, obcaecati sed quam labore",
-    //   stack: [{ name: "Html 5" }, { name: "Css3" }, { name: "Javascript" }],
-    //   image: Thumb3,
-    //   live: "",
-    //   github: "",
-    // },
+    {
+      num: "04",
+      category: "Realtime Chat App",
+      title: "project 04",
+      description:
+        "A sleek and user-friendly chat application built with modern web technologies, offering instant messaging, clean UI design, and smooth conversation management. Designed with a scalable architecture to easily integrate advanced features like real-time socket communication in future updates.",
+      stack: [
+        { name: "React js" },
+        { name: "Node js" },
+        { name: "Tailwind CSS" },
+      ],
+      image: Thumb4,
+      live: "",
+      github: "https://github.com/jillur984/Realtime-chat-app",
+    },
   ];
 
   const [project, setProject] = useState(projects[0]);
@@ -67,7 +89,13 @@ const WorkPage = () => {
   };
 
   return (
-    <motion.section initial={{opacity:0}} animate={{opacity:1,transition:{delay:2.4, duration:0.4, ease:"easeIn"}}}>
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+      }}
+    >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl-h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
@@ -152,7 +180,10 @@ const WorkPage = () => {
                   </SwiperSlide>
                 );
               })}
-              <WorkSliderBtns containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none" btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"/>
+              <WorkSliderBtns
+                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
+                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+              />
             </Swiper>
           </div>
         </div>

@@ -27,11 +27,11 @@ const ResumePage = () => {
   const about = {
     title: "About me",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae accusantium enim voluptatem praesentium",
+      "I’m a dedicated and detail-oriented developer with a strong passion for building modern, user-friendly, and high-performance web applications. I enjoy solving problems, learning new technologies, and turning creative ideas into functional digital experiences.",
     info: [
       { fieldName: "Name", fieldvalue: "Jillur Rahman" },
       { fieldName: "Phone", fieldvalue: "(+88) 01611780984" },
-      { fieldName: "Experience", fieldvalue: "6 Month" },
+      { fieldName: "Experience", fieldvalue: "6 Months" },
       { fieldName: "Skype", fieldvalue: "jillur" },
       { fieldName: "Nationality", fieldvalue: "Bangladeshi" },
       { fieldName: "Email", fieldvalue: "jillur.cse.bd@gmail.com" },
@@ -39,17 +39,16 @@ const ResumePage = () => {
     ],
   };
 
-  // experience data
-
+  // education data
   const education = {
     icon: { educationBadge },
-    title: "My Education", // corrected spelling from "Eductaion"
+    title: "My Education",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem consequuntur, voluptas accusamus ad in ea saepe cupiditate",
+      "My educational journey has been focused on technology and innovation. From practical hands-on training to advanced academic studies, each step has helped me grow as a developer and problem solver.",
     items: [
       {
         Institution: "Learn with Sumit",
-        Degree: "React Accelerator Course", // corrected spelling
+        Degree: "React Accelerator Course",
         duration: "2024",
       },
       {
@@ -70,7 +69,7 @@ const ResumePage = () => {
     icon: { resumeBadge },
     title: "My Experience",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem consequuntur, voluptas accusamus ad in ea saepe cupiditate",
+      "I’ve worked on a variety of projects that strengthened my skills in front-end development, teamwork, and delivering results under tight deadlines. Each role has shaped my ability to create high-quality, user-focused solutions.",
     items: [
       {
         company: "Bulipe Tech Limited",
@@ -87,53 +86,23 @@ const ResumePage = () => {
         position: "IT Officer",
         duration: "March-2019 - May-2024",
       },
-      
     ],
   };
 
   // skills data
-
   const skills = {
     title: "My Skills",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, cumque ab, id aliquam natus architecto officia",
+      "I specialize in crafting visually appealing, responsive, and high-performance web applications. My skill set combines strong technical expertise with a passion for clean design and intuitive user experiences.",
     skillList: [
-      {
-        icon: <FaHtml5 />,
-        name: "html5",
-      },
-      {
-        icon: <FaCss3 />,
-        name: "css",
-      },
-      {
-        icon: <FaJs />,
-        name: "javascript",
-      },
-      {
-        icon: <FaFigma />,
-        name: "Figma",
-      },
-      {
-        icon: <FaReact />,
-        name: "react.js",
-      },
-      {
-        icon: <SiNextdotjs />,
-        name: "next js",
-      },
-      {
-        icon: <FaHtml5 />,
-        name: "html5",
-      },
-      {
-        icon: <FaNodeJs />,
-        name: "node.js",
-      },
-      {
-        icon: <SiTailwindcss />,
-        name: "tailwind css",
-      },
+      { icon: <FaHtml5 />, name: "html5" },
+      { icon: <FaCss3 />, name: "css" },
+      { icon: <FaJs />, name: "javascript" },
+      { icon: <FaFigma />, name: "Figma" },
+      { icon: <FaReact />, name: "react.js" },
+      { icon: <SiNextdotjs />, name: "next js" },
+      { icon: <FaNodeJs />, name: "node.js" },
+      { icon: <SiTailwindcss />, name: "tailwind css" },
     ],
   };
 
@@ -151,8 +120,8 @@ const ResumePage = () => {
           defaultValue="experience"
           className="flex flex-col xl:flex-row gap-[60px]"
         >
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 ">
-            <TabsTrigger value="experience" className="bg-gray-800 shadow-lg  ">
+          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+            <TabsTrigger value="experience" className="bg-gray-800 shadow-lg">
               Experience
             </TabsTrigger>
             <TabsTrigger value="education" className="bg-gray-800">
@@ -165,67 +134,67 @@ const ResumePage = () => {
               About me
             </TabsTrigger>
           </TabsList>
-          <div className="min-h-[70vh] w-full">
-            {/* experience */}
 
+          <div className="min-h-[70vh] w-full">
+            {/* Experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold ">{experience?.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0  ">
+                <h3 className="text-4xl font-bold">{experience?.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {experience.items.map((item, index) => {
-                      return (
-                        <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
-                            {item.position}
-                          </h3>
-                          <div>
-                            {/* dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.company}</p>
-                          </div>
-                        </li>
-                      );
-                    })}
+                    {experience.items.map((item, index) => (
+                      <li
+                        key={index}
+                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                      >
+                        <span className="text-accent">{item.duration}</span>
+                        <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          {item.position}
+                        </h3>
+                        <div>
+                          <span className="w-[6px] h-[6px] rounded-full bg-accent inline-block mr-2"></span>
+                          <p className="text-white/60">{item.company}</p>
+                        </div>
+                      </li>
+                    ))}
                   </ul>
                 </ScrollArea>
               </div>
             </TabsContent>
+
+            {/* Education */}
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold ">{education?.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0  ">
+                <h3 className="text-4xl font-bold">{education?.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {education.description}
                 </p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {education.items.map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
-                        >
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[75px] text-center lg:text-left">
-                            {item.Degree}
-                          </h3>
-                          <div>
-                            {/* dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.Institution}</p>
-                          </div>
-                        </li>
-                      );
-                    })}
+                    {education.items.map((item, index) => (
+                      <li
+                        key={index}
+                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                      >
+                        <span className="text-accent">{item.duration}</span>
+                        <h3 className="text-xl max-w-[260px] min-h-[75px] text-center lg:text-left">
+                          {item.Degree}
+                        </h3>
+                        <div>
+                          <span className="w-[6px] h-[6px] rounded-full bg-accent inline-block mr-2"></span>
+                          <p className="text-white/60">{item.Institution}</p>
+                        </div>
+                      </li>
+                    ))}
                   </ul>
                 </ScrollArea>
               </div>
             </TabsContent>
-            {/* skills */}
+
+            {/* Skills */}
             <TabsContent value="skills" className="w-full">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
@@ -235,45 +204,46 @@ const ResumePage = () => {
                   </p>
                 </div>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                  {skills.skillList.map((skill, index) => {
-                    return (
-                      <li key={index}>
-                        <TooltipProvider delayDuration={100}>
-                          <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300">
-                                {skill.icon}
-                              </div>
-                            </TooltipTrigger>
-                            <TooltipContent className="capitalize">
-                              <p>{skill.name}</p>
-                            </TooltipContent>
-                          </Tooltip>
-                        </TooltipProvider>
-                      </li>
-                    );
-                  })}
+                  {skills.skillList.map((skill, index) => (
+                    <li key={index}>
+                      <TooltipProvider delayDuration={100}>
+                        <Tooltip>
+                          <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                            <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                              {skill.icon}
+                            </div>
+                          </TooltipTrigger>
+                          <TooltipContent className="capitalize">
+                            <p>{skill.name}</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </TabsContent>
 
-            {/* about */}
-
-            <TabsContent value="about" className="w-full text-center xl:text-left">
+            {/* About */}
+            <TabsContent
+              value="about"
+              className="w-full text-center xl:text-left"
+            >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {about.description}
+                </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                  {
-                    about.info.map((item,index)=>{
-                      return (
-                        <li key={index} className="flex items-center xl:justify-start gap-4">
-                          <span className="text-white/60">{item.fieldName}</span>
-                          <span className="text-xl">{item.fieldvalue}</span>
-                        </li>
-                      )
-                    })
-                  }
+                  {about.info.map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex items-center xl:justify-start gap-4"
+                    >
+                      <span className="text-white/60">{item.fieldName}</span>
+                      <span className="text-xl">{item.fieldvalue}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </TabsContent>
