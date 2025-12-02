@@ -47,11 +47,6 @@ const ResumePage = () => {
       "My educational journey has been focused on technology and innovation. From practical hands-on training to advanced academic studies, each step has helped me grow as a developer and problem solver.",
     items: [
       {
-        Institution: "Learn with Sumit",
-        Degree: "React Accelerator Course",
-        duration: "2024",
-      },
-      {
         Institution: "Habiganj Polytechnic Institute",
         Degree: "Diploma in Computer Technology",
         duration: "2013-2017",
@@ -72,9 +67,15 @@ const ResumePage = () => {
       "I’ve worked on a variety of projects that strengthened my skills in front-end development, teamwork, and delivering results under tight deadlines. Each role has shaped my ability to create high-quality, user-focused solutions.",
     items: [
       {
+        company: "QRBD Limited ( A Sister Concern of Ayesha Telecom)",
+        position: "Software Developer with QA Testing",
+        duration: "Sep 2025 - Continue",
+      },
+
+      {
         company: "Bulipe Tech Limited",
         position: "Front End Developer",
-        duration: "June 2025 - Present",
+        duration: "June 2025 - Sep 2025",
       },
       {
         company: "Intern Wise",
@@ -148,7 +149,7 @@ const ResumePage = () => {
                     {experience.items.map((item, index) => (
                       <li
                         key={index}
-                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        className="bg-[#232329]  py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                       >
                         <span className="text-accent">{item.duration}</span>
                         <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
@@ -177,7 +178,7 @@ const ResumePage = () => {
                     {education.items.map((item, index) => (
                       <li
                         key={index}
-                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        className="bg-[#232329]  py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                       >
                         <span className="text-accent">{item.duration}</span>
                         <h3 className="text-xl max-w-[260px] min-h-[75px] text-center lg:text-left">

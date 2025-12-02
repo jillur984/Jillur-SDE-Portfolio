@@ -14,27 +14,53 @@ import { useState } from "react";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Thumb1 from "../../public/assets/thumb1.png";
-import Thumb2 from "../../public/assets/thumb2.png";
-import Thumb3 from "../../public/assets/thumb3.png";
-import Thumb4 from "../../public/assets/thumb4.png";
+import Clinic from "../../public/assets/thumb1.png";
+import E_Commerce from "../../public/assets/thumb2.png";
+import Gym from "../../public/assets/thumb3.png";
+import ATCT from "../../public/assets/thumb5.png";
 
 const WorkPage = () => {
   const projects = [
-    {
+
+     {
       num: "01",
-      category: "Clinic Management",
+      category: "Full Stack E-Commerce with Dashboard",
       title: "project 01",
+      description:
+        "A E commerce based project where user Product Update,Edit,Add,Orders,Role all are Maintain from Dashboard.",
+      stack: [{ name: "Express" }, { name: "MongoDB" }, { name: "React" }],
+      image: E_Commerce,
+      live: "/",
+      github:
+        "https://github.com/jillur984/full-stack-e-commerce-with-dashboard",
+    },
+    {
+      num: "02",
+      category: "Ayesha Telecom Company Site",
+      title: "project 02",
+      description:
+        "It is a overview of Ayesha Telecom Company with Manage from Dashboard",
+      stack: [{ name: "Next" }, { name: "MongoDB" }],
+      image: ATCT,
+      live: "https://atctbd.com/",
+      github:
+        "",
+    },
+    {
+      num: "03",
+      category: "Clinic Management",
+      title: "project 03",
       description:
         "A smart clinic management platform where patients can search for doctors based on their needs, book appointments, and view available time slots. Includes nurse availability tracking and is designed for future enhancements like automated report generation.",
       stack: [{ name: "Express" }, { name: "MongoDB" }, { name: "React" }],
-      image: Thumb1,
+      image: Clinic,
       live: "https://jillurm-clinic.vercel.app/",
       github:
         "https://github.com/jillur984/Self-Project-Clinic-Management-Project",
     },
+   
     {
-      num: "02",
+      num: "04",
       category: "Gym Management System",
       title: "project 02",
       description:
@@ -44,41 +70,11 @@ const WorkPage = () => {
         { name: "Typescript" },
         { name: "Tailwind CSS" },
       ],
-      image: Thumb3,
+      image: Gym,
       live: "https://gym-management-system-sde.vercel.app/",
       github: "https://github.com/jillur984/GYM-management-system-",
     },
-
-    {
-      num: "03",
-      category: "MERN Food Delivery App",
-      title: "project 03",
-      description:
-        "End-to-End Food Delivery Website (MERN Stack + Tailwind CSS + Stripe + WhatsApp Integration.It is complete end-to-end project, I developed a fully responsive and modern food delivery website using the MERN Stack — MongoDB, Express.js, React.js, and Node.js.The UI was crafted with Tailwind CSS for a sleek, mobile-friendly design. I integrated Stripe for secure payment processing and added real-time messaging via WhatsApp to enhance customer support and engagement.",
-      stack: [
-        { name: "React js" },
-        { name: "Node js" },
-        { name: "Tailwind CSS" },
-      ],
-      image: Thumb2,
-      live: "",
-      github: "https://github.com/jillur984/MERN-Food-Delivery-App.git",
-    },
-    {
-      num: "04",
-      category: "Realtime Chat App",
-      title: "project 04",
-      description:
-        "A sleek and user-friendly chat application built with modern web technologies, offering instant messaging, clean UI design, and smooth conversation management. Designed with a scalable architecture to easily integrate advanced features like real-time socket communication in future updates.",
-      stack: [
-        { name: "React js" },
-        { name: "Node js" },
-        { name: "Tailwind CSS" },
-      ],
-      image: Thumb4,
-      live: "",
-      github: "https://github.com/jillur984/Realtime-chat-app",
-    },
+   
   ];
 
   const [project, setProject] = useState(projects[0]);
